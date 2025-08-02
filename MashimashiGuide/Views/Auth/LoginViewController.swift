@@ -17,6 +17,8 @@ class LoginViewController: UIViewController {
         
         slider.addTarget(self, action: #selector(sliderDidChangeValue(_:)), for: .valueChanged)
         slider.transform = slider.transform.scaledBy(x: -1, y: 1);
+        label.textAlignment = NSTextAlignment.center
+
     }
     
     @objc func sliderDidChangeValue(_ sender: CustomSlider) { // @IBActionでも可

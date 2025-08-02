@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24057"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,44 +29,40 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0c-5B-Lcj">
-                                <rect key="frame" x="159" y="548" width="75" height="35"/>
+                                <rect key="frame" x="159" y="552" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ff0-cS-HJm" customClass="CustomSlider" customModule="MashimashiGuide" customModuleProvider="target">
-                                <rect key="frame" x="69" y="674" width="254" height="34"/>
+                                <rect key="frame" x="67" y="678" width="258" height="31"/>
                                 <connections>
                                     <action selector="slider:" destination="j85-oW-I2y" eventType="valueChanged" id="0ix-19-tyI"/>
                                     <action selector="sliderValue:" destination="Y6W-OH-hqX" eventType="valueChanged" id="ln3-BT-jrZ"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Kk-LO-tdz">
-                                <rect key="frame" x="161" y="94" width="71" height="36"/>
+                                <rect key="frame" x="161" y="80" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchImg" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-Y6-kJS">
-                                <rect key="frame" x="142" y="-270" width="109" height="1024"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="LaunchImg" translatesAutoresizingMaskIntoConstraints="NO" id="iOk-af-FqZ">
+                                <rect key="frame" x="76" y="195" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="6Kk-LO-tdz" secondAttribute="bottom" constant="20" id="4eD-hH-RrW"/>
-                            <constraint firstItem="6ix-Y6-kJS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="270" id="5tu-g4-OoT"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Y0c-5B-Lcj" secondAttribute="trailing" constant="159" id="7m3-2B-QXB"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ff0-cS-HJm" secondAttribute="trailing" constant="70" id="8c2-og-qHH"/>
-                            <constraint firstItem="6Kk-LO-tdz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="94" id="Gjf-GZ-Jc5"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6ix-Y6-kJS" secondAttribute="trailing" constant="142" id="J0g-36-AXL"/>
-                            <constraint firstItem="6ix-Y6-kJS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="142" id="L5V-Cy-foU"/>
                             <constraint firstItem="Ff0-cS-HJm" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="69" id="R2Q-lR-YTL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ff0-cS-HJm" secondAttribute="bottom" constant="76" id="WH1-jn-1Gu"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="6Kk-LO-tdz" secondAttribute="trailing" constant="161" id="dZP-UI-3hq"/>
                             <constraint firstItem="6Kk-LO-tdz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="161" id="obh-SF-zfT"/>
                             <constraint firstItem="Ff0-cS-HJm" firstAttribute="top" secondItem="Y0c-5B-Lcj" secondAttribute="bottom" constant="91" id="por-Q6-YMe"/>
+                            <constraint firstItem="6Kk-LO-tdz" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="80" id="vNk-6C-T8a"/>
                             <constraint firstItem="Y0c-5B-Lcj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="159" id="xDj-Ry-uUP"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="6ix-Y6-kJS" secondAttribute="bottom" constant="30" id="zvZ-cM-dZs"/>
                         </constraints>
                     </view>
                     <connections>
