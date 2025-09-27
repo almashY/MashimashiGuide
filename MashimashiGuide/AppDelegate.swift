@@ -1,6 +1,8 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseAuth
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -12,8 +14,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("start")
         // 0.5秒止める
         Thread.sleep(forTimeInterval: 0.5)
+        // Firebaseの初期化処理
         FirebaseApp.configure()
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
+        return GIDSignIn.sharedInstance.handle(url)
     }
 
     // MARK: UISceneSession Lifecycle
