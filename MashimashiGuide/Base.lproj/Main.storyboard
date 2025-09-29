@@ -36,7 +36,7 @@
         <!--home-->
         <scene sceneID="gdE-io-aFe">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QdE-3d-iZx" sceneMemberID="viewController">
+                <viewController id="QdE-3d-iZx" customClass="MainViewController" customModule="MashimashiGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19b-6N-a1w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="ログアウト"/>
                                 <connections>
-                                    <action selector="didTapLogout:" destination="pju-nl-ONB" eventType="touchUpInside" id="L7l-UJ-mUv"/>
+                                    <action selector="didTapLogout:" destination="QdE-3d-iZx" eventType="touchUpInside" id="zTv-5y-aTx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -67,7 +67,6 @@
                     <tabBarItem key="tabBarItem" title="home" image="house" catalog="system" id="l6b-QV-jNb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Po-7f-LHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="pju-nl-ONB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1085" y="-39"/>
         </scene>
