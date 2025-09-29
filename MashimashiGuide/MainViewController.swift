@@ -13,7 +13,17 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func tappedWithoutAsyncAwaitButton(_ sender: UIButton) {
+        print("closure")
+        let Server = serverTaskWithAsyncAwait()
+        Task{
+            let total = try? await Server.executeBothTask()
+            print("total: \(String(describing: total))")
+        }
+    }
+        
+    
     @IBAction func didTapLogout(_ sender: Any) {
         let alert = UIAlertController(title: "サインアウト", message: "本当にサインアウトしますか？", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "キャンセル", style: .cancel, handler: nil))

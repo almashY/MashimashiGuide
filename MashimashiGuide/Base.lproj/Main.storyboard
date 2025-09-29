@@ -36,7 +36,7 @@
         <!--home-->
         <scene sceneID="gdE-io-aFe">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QdE-3d-iZx" sceneMemberID="viewController">
+                <viewController id="QdE-3d-iZx" customClass="MainViewController" customModule="MashimashiGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19b-6N-a1w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,13 +53,23 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="ログアウト"/>
                                 <connections>
-                                    <action selector="didTapLogout:" destination="pju-nl-ONB" eventType="touchUpInside" id="L7l-UJ-mUv"/>
+                                    <action selector="didTapLogout:" destination="QdE-3d-iZx" eventType="touchUpInside" id="Ayg-PO-gBT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFj-2w-k0l">
+                                <rect key="frame" x="50.999999999999993" y="99" width="111.33333333333331" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="AsyncAwait"/>
+                                <connections>
+                                    <action selector="tappedWithoutAsyncAwaitButton:" destination="QdE-3d-iZx" eventType="touchUpInside" id="p6L-75-lMY"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="a4n-m5-qoC"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                         <constraints>
+                            <constraint firstItem="NFj-2w-k0l" firstAttribute="leading" secondItem="a4n-m5-qoC" secondAttribute="leading" constant="51" id="64M-Av-dTm"/>
+                            <constraint firstItem="NFj-2w-k0l" firstAttribute="top" secondItem="19b-6N-a1w" secondAttribute="top" constant="99" id="YDM-4T-Dv5"/>
                             <constraint firstItem="p0J-mu-ajf" firstAttribute="top" secondItem="19b-6N-a1w" secondAttribute="top" constant="99" id="ZVD-y9-GPQ"/>
                             <constraint firstItem="a4n-m5-qoC" firstAttribute="trailing" secondItem="p0J-mu-ajf" secondAttribute="trailing" constant="51" id="b2A-05-KgT"/>
                         </constraints>
@@ -67,7 +77,6 @@
                     <tabBarItem key="tabBarItem" title="home" image="house" catalog="system" id="l6b-QV-jNb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Po-7f-LHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="pju-nl-ONB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1085" y="-39"/>
         </scene>
