@@ -8,8 +8,21 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var GoogleSignInButton: UIButton!
     
+    @IBOutlet @UnwrappedIBOutlet(errorSender: FALogSender()) var numberLabel: UILabel?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // わざと外すような挙動にする
+        numberLabel = nil
+        
+        if let label = numberLabel {
+            label.text = "OK"
+        } else {
+            print("⚠️ ラベルが接続されていません")
+        }
+        
         // ボタンをタップした時のアクションを指定。SignInファンクションを呼び出すよ。
         GoogleSignInButton.addTarget(self, action: #selector(SignIn), for: .touchUpInside)
     }

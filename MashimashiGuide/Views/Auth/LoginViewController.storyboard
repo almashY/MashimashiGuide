@@ -21,6 +21,12 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Googleアカウントでログインする"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-5w-Mgc">
+                                <rect key="frame" x="175" y="220" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -28,11 +34,14 @@
                             <constraint firstItem="3bZ-fi-6v8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="290" id="DGf-UW-BHL"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="3bZ-fi-6v8" secondAttribute="bottom" constant="341" id="NIF-Rv-pui"/>
                             <constraint firstItem="3bZ-fi-6v8" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="QWB-fe-Biy"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="P3b-5w-Mgc" secondAttribute="trailing" constant="176" id="Tp7-li-LWh"/>
+                            <constraint firstItem="P3b-5w-Mgc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="102" id="yyL-1C-abF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wmu-zF-C91"/>
                     <connections>
                         <outlet property="GoogleSignInButton" destination="3bZ-fi-6v8" id="BJw-O4-vhe"/>
+                        <outlet property="numberLabel" destination="P3b-5w-Mgc" id="6Hb-19-OL3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
