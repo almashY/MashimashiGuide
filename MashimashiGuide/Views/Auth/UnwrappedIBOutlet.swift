@@ -16,11 +16,30 @@ struct UnwrappedIBOutlet<T> {
     }
     
     var wrappedValue: T {
-        get {
-            core.wrappedValue
+        get { core.wrappedValue }
+        set { core.wrappedValue = newValue }
+    }
+    
+    @propertyWrapper
+    struct UnwrappedIBOutletCore<U> {
+        private var storage: U?
+        private let errorSender: IErrorSender?
+        
+        init(errorSender: IErrorSender? = nil){
+            self.errorSender = errorSender
         }
-        set {
-            core.wrappedValue = newValue
+        
+        var wrappedValue: U {
+            get {
+                guard let value = storage else {
+                    fatalError("⚠️ IBOutletがnilです！（接続されていません）")
+                }
+                errorSender?.sendError(message: "IBOutletの接続に失敗", code: "404")
+                return value
+            }
+            set {
+                storage = newValue
+            }
         }
     }
 }
@@ -31,25 +50,4 @@ protocol IErrorSender {
     func sendError(message: String, code: String)
 }
 
-@propertyWrapper
-struct UnwrappedIBOutletCore<T> {
-    private var storage: T?
-    private let errorSender: IErrorSender?
-    
-    init(errorSender: IErrorSender? = nil){
-        self.errorSender = errorSender
-    }
-    
-    var wrappedValue: T {
-        get {
-            guard let value = storage else {
-                fatalError("⚠️ IBOutletがnilです！（接続されていません）")
-            }
-            errorSender?.sendError(message: "IBOutletの接続に失敗", code: "404")
-            return value
-        }
-        set {
-            storage = newValue
-        }
-    }
-}
+
