@@ -8,7 +8,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var GoogleSignInButton: UIButton!
     
-    @IBOutlet @UnwrappedIBOutlet(errorSender: FALogSender()) var numberLabel: UILabel?
+    @IBOutlet @UnwrappedIBOutlet var numberLabel: UILabel?
     
     
     override func viewDidLoad() {

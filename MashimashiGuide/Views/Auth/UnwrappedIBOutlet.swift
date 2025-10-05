@@ -7,12 +7,32 @@
 
 import Foundation
 
+@propertyWrapper
+struct UnwrappedIBOutlet<T> {
+    private var core: UnwrappedIBOutletCore<T>
+    
+    init(){
+        self.core = UnwrappedIBOutletCore(errorSender: FALogSender())
+    }
+    
+    var wrappedValue: T {
+        get {
+            core.wrappedValue
+        }
+        set {
+            core.wrappedValue = newValue
+        }
+    }
+}
+
+
+
 protocol IErrorSender {
     func sendError(message: String, code: String)
 }
 
 @propertyWrapper
-struct UnwrappedIBOutlet<T> {
+struct UnwrappedIBOutletCore<T> {
     private var storage: T?
     private let errorSender: IErrorSender?
     
