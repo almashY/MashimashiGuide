@@ -30,9 +30,9 @@
             filePath = "MashimashiGuide/Views/Auth/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "SignIn()"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "switchToMain()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -49,6 +49,22 @@
             startingLineNumber = "25"
             endingLineNumber = "25"
             landmarkName = "scene(_:willConnectTo:options:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D40C8BD1-5C25-4663-9E96-5A925C526807"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MashimashiGuide/MainViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "didTapLogout(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
