@@ -3,7 +3,6 @@ import UIKit
 import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
-import FirebaseAnalytics
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,11 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebaseの初期化処理
         FirebaseApp.configure()
         
-        // デバッグ用テストイベント
-        Analytics.logEvent("debug_test_event", parameters: [
-            "screen": "AppDelegate",
-            "status": "launch"
-        ])
         return true
     }
     
