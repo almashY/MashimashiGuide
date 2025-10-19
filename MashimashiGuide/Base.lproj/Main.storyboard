@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--post-->
+        <!--検索-->
         <scene sceneID="58q-3p-YET">
             <objects>
                 <viewController id="FgK-yF-Zbn" sceneMemberID="viewController">
@@ -27,16 +27,16 @@
                         <viewLayoutGuide key="safeArea" id="sbO-se-xbq"/>
                         <color key="backgroundColor" systemColor="systemCyanColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="post" image="plus.app" catalog="system" id="zLa-04-rdq"/>
+                    <tabBarItem key="tabBarItem" title="検索" image="magnifyingglass" catalog="system" id="zLa-04-rdq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Src-rW-vkB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1086" y="616"/>
+            <point key="canvasLocation" x="-992" y="1160"/>
         </scene>
-        <!--home-->
+        <!--基本ルール-->
         <scene sceneID="gdE-io-aFe">
             <objects>
-                <viewController id="QdE-3d-iZx" customClass="MainViewController" customModule="MashimashiGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QdE-3d-iZx" customClass="BasicRulesViewController" customModule="MashimashiGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19b-6N-a1w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="ログアウト"/>
                                 <connections>
-                                    <action selector="didTapLogout:" destination="QdE-3d-iZx" eventType="touchUpInside" id="zTv-5y-aTx"/>
+                                    <action selector="didTapLogout:" destination="QdE-3d-iZx" eventType="touchUpInside" id="CyF-sf-ihe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,16 +64,16 @@
                             <constraint firstItem="a4n-m5-qoC" firstAttribute="trailing" secondItem="p0J-mu-ajf" secondAttribute="trailing" constant="51" id="b2A-05-KgT"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="home" image="house" catalog="system" id="l6b-QV-jNb"/>
+                    <tabBarItem key="tabBarItem" title="基本ルール" image="book" catalog="system" id="l6b-QV-jNb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Po-7f-LHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1085" y="-39"/>
+            <point key="canvasLocation" x="-3117" y="1147"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main View Controller-->
         <scene sceneID="jaj-NQ-Fkx">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="NSc-Sa-KMp" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" id="NSc-Sa-KMp" customClass="MainViewController" customModule="MashimashiGuide" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BY6-A4-Hb4">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -81,6 +81,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="QdE-3d-iZx" kind="relationship" relationship="viewControllers" id="f1c-vG-IQG"/>
+                        <segue destination="O36-b5-6cL" kind="relationship" relationship="viewControllers" id="i4B-O7-RIA"/>
                         <segue destination="FgK-yF-Zbn" kind="relationship" relationship="viewControllers" id="TQ3-Uh-dLv"/>
                     </connections>
                 </tabBarController>
@@ -88,12 +89,32 @@
             </objects>
             <point key="canvasLocation" x="-2059" y="307"/>
         </scene>
+        <!--map-->
+        <scene sceneID="lbH-3o-H20">
+            <objects>
+                <viewController id="O36-b5-6cL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9EE-qn-nUq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0WT-3A-cLx"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="map" image="map" catalog="system" id="EvP-dj-1lC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvh-ZN-g0k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2060" y="1147"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="house" catalog="system" width="128" height="104"/>
-        <image name="plus.app" catalog="system" width="128" height="114"/>
+        <image name="book" catalog="system" width="128" height="99"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <image name="map" catalog="system" width="128" height="112"/>
         <systemColor name="systemCyanColor">
             <color red="0.1960784314" green="0.67843137249999996" blue="0.90196078430000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

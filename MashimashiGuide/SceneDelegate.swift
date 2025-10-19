@@ -21,17 +21,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // Login.storyboard から LoginViewController を呼び出す
         
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+        window?.rootViewController = mainVC
         
-        if Auth.auth().currentUser != nil {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
-            window?.rootViewController = mainVC
-            
-        } else {
-            let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
-            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            window?.rootViewController = loginVC
-        }
+//        if Auth.auth().currentUser != nil {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let mainVC = storyboard.instantiateViewController(withIdentifier: "MainTabBarController")
+//            window?.rootViewController = mainVC
+//            
+//        } else {
+//            let storyboard = UIStoryboard(name: "LoginViewController", bundle: nil)
+//            let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+//            window?.rootViewController = loginVC
+//        }
         
         window?.makeKeyAndVisible()
 
