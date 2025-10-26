@@ -33,10 +33,10 @@
             </objects>
             <point key="canvasLocation" x="-992" y="1160"/>
         </scene>
-        <!--基本ルール-->
+        <!--basic-->
         <scene sceneID="gdE-io-aFe">
             <objects>
-                <viewController id="QdE-3d-iZx" customClass="BasicRulesViewController" customModule="MashimashiGuide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QdE-3d-iZx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="19b-6N-a1w">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,11 +52,21 @@
                         <viewLayoutGuide key="safeArea" id="a4n-m5-qoC"/>
                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="基本ルール" image="book" catalog="system" id="l6b-QV-jNb"/>
+                    <tabBarItem key="tabBarItem" title="basic" image="square.and.arrow.up" catalog="system" id="l6b-QV-jNb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Po-7f-LHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3117" y="1147"/>
+        </scene>
+        <!--BasicRulesView-->
+        <scene sceneID="IEj-oe-xNt">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BasicRulesView" id="rsW-Yx-Ks2" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="exE-yE-9bp"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuJ-Sk-PNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3190" y="292"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="jaj-NQ-Fkx">
@@ -71,6 +81,7 @@
                         <segue destination="QdE-3d-iZx" kind="relationship" relationship="viewControllers" id="f1c-vG-IQG"/>
                         <segue destination="O36-b5-6cL" kind="relationship" relationship="viewControllers" id="i4B-O7-RIA"/>
                         <segue destination="FgK-yF-Zbn" kind="relationship" relationship="viewControllers" id="TQ3-Uh-dLv"/>
+                        <segue destination="rsW-Yx-Ks2" kind="relationship" relationship="viewControllers" id="MtN-VS-MAx"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B5x-kL-yZp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -118,9 +129,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="128" height="99"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="map" catalog="system" width="128" height="112"/>
+        <image name="square.and.arrow.up" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
