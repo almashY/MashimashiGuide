@@ -15,8 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JiN-eJ-7qy">
+                                <rect key="frame" x="0.0" y="74" width="393" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="P9M-1U-JvN"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="0.77254901960784317" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="マシマシガイド" id="4aw-oJ-L3s"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JiN-eJ-7qy" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="74" id="X1u-9Z-exs"/>
+                            <constraint firstItem="JiN-eJ-7qy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nDi-Qq-pH8"/>
+                            <constraint firstItem="JiN-eJ-7qy" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tc8-1G-KAP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="基本ルール" image="book" catalog="system" id="BAD-zf-rqx"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>

@@ -27,12 +27,28 @@
                                     <action selector="didTapLogout:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="U9N-wQ-qKQ"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FCh-br-1IG">
+                                <rect key="frame" x="0.0" y="74" width="393" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hdb-Rh-lMn"/>
+                                </constraints>
+                                <color key="barTintColor" red="1" green="0.77254901960784317" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="マシマシガイド" id="RKi-lj-u4p"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FCh-br-1IG" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="74" id="LYJ-Xt-0eE"/>
+                            <constraint firstItem="FCh-br-1IG" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="QE6-ky-yPI"/>
                             <constraint firstItem="nbu-zJ-v7v" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="U2C-J6-dgT"/>
                             <constraint firstItem="nbu-zJ-v7v" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="UrW-hM-bVm"/>
+                            <constraint firstAttribute="trailing" secondItem="FCh-br-1IG" secondAttribute="trailing" id="kEc-kf-VPs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="マップ" image="map" catalog="system" id="kGK-q5-8W7"/>
