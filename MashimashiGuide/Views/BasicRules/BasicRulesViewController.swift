@@ -13,6 +13,4 @@ class BasicRulesViewController: UIViewController {
         super.viewDidLoad()
         
     }
-    
-    
 }
